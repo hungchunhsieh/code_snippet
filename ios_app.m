@@ -1,9 +1,14 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options 
 {
+    NSString *urlString = [url absoluteString];
+    NSString *urlEncoded = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+
     // Ensure the URL is valid and don't directly use the query or path part of the URL, filter and validate it first
-    if (url) {
+    if (urlEncoded) {
         // Use NSURLComponents to parse the URL and filter each part
-        NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:YES];
+        NSURLComponents *components = [NSURLComponents componentsWithURL:urlEncoded encodingInvalidCharacters:YES];
+
+        // resolvingAgainstBaseURL
         if (!components) {
             return NO;
         }
