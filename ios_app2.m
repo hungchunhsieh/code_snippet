@@ -1,4 +1,4 @@
-(* https://stackoverflow.com/questions/65580496/sanitize-nsurl-in-objective-c *)
+// https://stackoverflow.com/questions/65580496/sanitize-nsurl-in-objective-c
 
 - (BOOL)application:(UIApplication *)application
    openURL:(NSURL *)url
