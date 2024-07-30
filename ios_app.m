@@ -62,7 +62,7 @@
 (* https://stackoverflow.com/questions/65580496/sanitize-nsurl-in-objective-c *)
 
 - (BOOL)application:(UIApplication *)application
-   openURL:(NSURL *)url
+   openURL2:(NSURL *)url
    options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
 {
 
