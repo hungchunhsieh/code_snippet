@@ -1,3 +1,17 @@
+#import "AppDelegate.h"
+
+#import <React/RCTBridge.h>
+#import <React/RCTBundleURLProvider.h>
+#import <React/RCTRootView.h>
+#import <React/RCTLinkingManager.h>
+
+#import <Firebase.h>
+#import <RNFSManager.h>
+#import <UserNotifications/UserNotifications.h>
+#import <RNCPushNotificationIOS.h>
+#import "RNSplashScreen.h"
+#import <Foundation/Foundation.h>
+
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options 
 {
     NSString *urlString = [url absoluteString];
