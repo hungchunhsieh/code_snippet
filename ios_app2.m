@@ -4,8 +4,6 @@
    openURL:(NSURL *)url
    options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
 {
-
-NSString *urlEncoded = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
-
-  return [RCTLinkingManager application:application openURL:urlEncoded options:options];
+    NSString *urlEncoded = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+    return [RCTLinkingManager application:application openURL:urlEncoded options:options];
 } 
