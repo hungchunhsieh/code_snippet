@@ -1,0 +1,11 @@
+  "member.login": {
+    "error": {
+      "title": "Login failed",
+      "details": {
+        "id": {
+          "MAX_LENGTH": "User name must be 6 to 12 characters long ",
+          "FORMAT_INVALID": "User name must match to ^[0-9a-zA-Z]{6,12}$"
+        }
+      }
+    }
+  },
